@@ -76,6 +76,15 @@ const Cruises = ({ data }: CruisesProps) => {
                   from <span className="font-bold">£{cruise.price}</span>
                 </p>
               </div>
+              <div className={`bg-[#8e7e41] absolute bottom-2 right-2`}>
+                <Image
+                  src={cruise.iconOverlay}
+                  alt={cruise.cruiseLineName}
+                  width={30}
+                  height={30}
+                  className=" "
+                />
+              </div>
             </Link>
           </div>
         ))}
