@@ -53,7 +53,7 @@ const Cruises = ({ data }: CruisesProps) => {
         {data.map((cruise: Cruise, idx: number) => (
           <div key={`cruise-${idx}`} className=" w-[200px] ">
             <Link
-              href={`/cruise/${cruise.name}`}
+              href={`/cruise/${idx}`}
               className="text-xs inline-block w-[182px] h-[210px] border rounded-md relative"
             >
               <Image

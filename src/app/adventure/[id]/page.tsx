@@ -2,14 +2,14 @@
 
 import { useParams } from "next/navigation";
 
-export const CruisePage = () => {
+export const AdventurePage = () => {
   const { id } = useParams();
 
   return (
     <>
-      <h1>Cruise page for cruise with id-{id}</h1>
+      <h1>Adventure page for cruise with id-{id}</h1>
     </>
   );
 };
 
-export default CruisePage;
+export default AdventurePage;
