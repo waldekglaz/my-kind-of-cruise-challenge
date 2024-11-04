@@ -1,9 +1,11 @@
 "use client";
+import Heading from "./Heading";
 import Image from "next/image";
 import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { formatDate } from "../../lib/helpers/formatDate";
+import Head from "next/head";
 
 type Cruise = {
   name: string;
@@ -42,7 +44,7 @@ const responsive = {
 const Cruises = ({ data }: CruisesProps) => {
   return (
     <div>
-      <h2>Popular Cruises</h2>
+      <Heading title="Popular Cruises" />
       <Carousel
         ssr={true}
         responsive={responsive}

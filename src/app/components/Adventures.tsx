@@ -1,4 +1,6 @@
 "use client";
+import Head from "next/head";
+import Heading from "./Heading";
 import Image from "next/image";
 import Link from "next/link";
 import Carousel from "react-multi-carousel";
@@ -31,7 +33,7 @@ type AdventuresProps = {
 const Adventures = ({ data }: AdventuresProps) => {
   return (
     <div>
-      <h2 className="mb-4">Adventures</h2>
+      <Heading title="Adventures" />
       <Carousel
         ssr={true}
         responsive={responsive}
