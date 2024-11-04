@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 
-export const AdventurePage = () => {
+const AdventurePage = () => {
   const { id } = useParams();
 
   return (
