@@ -5,7 +5,6 @@ import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { formatDate } from "../../lib/helpers/formatDate";
-import Head from "next/head";
 
 type Cruise = {
   name: string;
@@ -28,16 +27,24 @@ type CruisesProps = {
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 5.3,
+    breakpoint: { max: 3000, min: 1440 },
+    items: 5.8,
+  },
+  laptop: {
+    breakpoint: { max: 1439, min: 1023 },
+    items: 4.7,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2.8,
+    breakpoint: { max: 1023, min: 464 },
+    items: 2.9,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1.3,
+    breakpoint: { max: 463, min: 375 },
+    items: 1.8,
+  },
+  smMobile: {
+    breakpoint: { max: 374, min: 0 },
+    items: 1.4,
   },
 };
 
@@ -56,7 +63,7 @@ const Cruises = ({ data }: CruisesProps) => {
           <div key={`cruise-${idx}`} className=" w-[200px] ">
             <Link
               href={`/cruise/${idx}`}
-              className="text-xs inline-block w-[182px] h-[210px] border rounded-md relative"
+              className="text-xs inline-block w-[182px] h-[220px] border rounded-md relative"
             >
               <Image
                 src={cruise.shipImage}
@@ -76,7 +83,10 @@ const Cruises = ({ data }: CruisesProps) => {
                   from <span className="font-bold">£{cruise.price}</span>
                 </p>
               </div>
-              <div className={`bg-[#8e7e41] absolute bottom-2 right-2`}>
+              <div
+                style={{ backgroundColor: cruise.iconBackgroundColor }}
+                className="absolute bottom-2 right-2"
+              >
                 <Image
                   src={cruise.iconOverlay}
                   alt={cruise.cruiseLineName}

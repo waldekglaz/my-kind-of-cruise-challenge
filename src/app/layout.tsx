@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${outfit.className} antialiased`}>
         <Header />
-        <main className="sm:mx-auto sm:max-w-[584px] md:pl-0  md:max-w-[612px] lg:max-w-[996px] xl:max-w-[1196px] mt-6">
+        <main className="px-4 sm:mx-auto sm:max-w-[584px]   md:max-w-[612px] lg:max-w-[996px] xl:max-w-[1196px] mt-6">
           {children}
         </main>
       </body>

@@ -13,16 +13,24 @@ type TAdventure = {
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 5.5,
+    breakpoint: { max: 3000, min: 1440 },
+    items: 6.8,
+  },
+  laptop: {
+    breakpoint: { max: 1439, min: 1023 },
+    items: 4.7,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 3.3,
+    breakpoint: { max: 1023, min: 464 },
+    items: 3.5,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1.4,
+    breakpoint: { max: 463, min: 375 },
+    items: 2.2,
+  },
+  smMobile: {
+    breakpoint: { max: 374, min: 0 },
+    items: 1.8,
   },
 };
 
@@ -59,7 +67,7 @@ const Adventures = ({ data }: AdventuresProps) => {
                     height={100}
                     className="rounded-t-md h-[92px]  w-full object-cover select-none "
                   />
-                  <p className=" py-2 font-semibold text-sm text-center overflow-hidden select-none">
+                  <p className=" py-2 font-semibold text-xs text-center overflow-hidden select-none">
                     {adventure.name}
                   </p>
                 </Link>
